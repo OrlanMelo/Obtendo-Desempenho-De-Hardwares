@@ -38,24 +38,24 @@ public:
 		if (DisponivelGB < 1 == true)
 		{
 			Valor = DisponivelMB;
-			cout << "Memória disponível: " << Valor << " MB" << " de: " << Total << " GB Total\n";
+			cout << "MemÃ³ria disponÃ­vel: " << Valor << " MB" << " de: " << Total << " GB Total\n";
 		}
 		else
 		{
 			Valor = DisponivelGB;
-			cout << "Memória disponível: " << Valor << " GB" << " de: " << Total << " GB Total\n";
+			cout << "MemÃ³ria disponÃ­vel: " << Valor << " GB" << " de: " << Total << " GB Total\n";
 		}
 
 		long Paginadas;
 		if (PaginadaGB < 1 == true)
 		{
 			Paginadas = PaginadaMB;
-			cout << "Memória paginável: " << Paginadas << " MB de: " << ConfirmadosGB << " GB confirmados em uso\n";
+			cout << "MemÃ³ria paginÃ¡vel: " << Paginadas << " MB de: " << ConfirmadosGB << " GB confirmados em uso\n";
 		}
 		else
 		{
 			Paginadas = PaginadaGB;
-			cout << "Memória paginável: " << Paginadas << " GB de: " << ConfirmadosGB << " GB confirmados em uso\n";
+			cout << "MemÃ³ria paginÃ¡vel: " << Paginadas << " GB de: " << ConfirmadosGB << " GB confirmados em uso\n";
 		}
 
 		cout << "Percentual usado: " << Memoria.dwMemoryLoad << " %\n";
@@ -76,15 +76,17 @@ public:
 			Sleep(300);
 
 			if (Valor.longValue > 100 == false)
+			{
 				cout << "Percentual de CPU usado: " << Valor.longValue << "%\n";
+			}
 
 			return ObterUsoDeCPU();
 
-			//Use PdhCloseQuery(Dados); quando a função de pesquisa não for mais necessário.
+			//Use PdhCloseQuery(Dados); quando a funÃ§Ã£o de pesquisa nÃ£o for mais necessÃ¡rio.
 		}
 		else
 		{
-			cout << "Ocorreu um erro ao obter informações do contador..\n";
+			cout << "Ocorreu um erro ao obter informaÃ§Ãµes do contador..\n";
 		}
 	}
 
@@ -93,7 +95,7 @@ public:
 int main()
 {
 
-	cout << "O assistente está verificando o desempenho de hardwares...\n";
+	cout << "O assistente estÃ¡ verificando o desempenho de hardwares...\n";
 
 	Funcoes.ObterUsoDeRAM();
 	Funcoes.ObterUsoDeCPU();
